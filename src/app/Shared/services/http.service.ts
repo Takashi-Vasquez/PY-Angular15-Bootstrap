@@ -42,7 +42,7 @@ export class HttpService {
     try {
       switch (method) {
         case Constants.API_METHODS.Get:
-          resul = this.http.get<ResponseMessage<T>>(`${apiBase}${path}`, { params: obj })
+          resul = this.http.get<ResponseMessage<T>>(`${apiBase}${path}`, { headers: obj })
             .pipe(catchError(e => this.catchErrorCustom<T>(e)));
           break;
         case Constants.API_METHODS.Post:

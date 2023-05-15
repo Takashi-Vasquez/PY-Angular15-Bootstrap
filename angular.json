@@ -18,6 +18,10 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/py-angular15-bootstrap",
+            "allowedCommonJsDependencies": [
+              "object-path",
+              "sweetalert2"
+            ],
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
